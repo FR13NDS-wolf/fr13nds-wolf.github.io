@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>
+        Project | Director
+    </title>
+
+    <script src="jquery.slim.min.js"></script>
+    <script type="text/javascript" src="high.js"></script>
+    <script type="text/javascript" defer src="clipButton.js"></script>
+    <script type="text/javascript" src="clipboard.min.js"></script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="keywords" content="设计,Hexo,前端,后端,Github" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Director">
+    <meta property="og:url" content="https://www.jere.club">
+    <meta property="og:site_name" content="Director">
+    <meta property="article:author" content="rhinoc">
+    <meta name="twitter:card" content="summary">
+    <meta name="generator" content="Hexo 4.2.0">
+
+
+    <link rel="icon" href="ava.png" />
+    <link rel="stylesheet" href="mdn-like.css">
+    <link href="styles.css" rel="stylesheet" />
+
+
+</head>
+
+
+
+
+<body>
+
+
+    <div class="content content-project">
+
+        <div class="page-header">
+            <div class="breadcrumb">
+                <div class="location">Projects</div>
+                <i class="icon-location"></i>
+            </div>
+
+
+            <!--<div class="toolbox">
+                <a class="toolbox-entry" href="index.html">
+                    <span class="toolbox-entry-text">+</span>
+                    <i class="icon-angle-down"></i>
+                    <i class="icon-home"></i>
+                </a>
+                <ul class="list-toolbox">
+
+                    <li class="item-toolbox">
+                        <a class="CIRCLE" href="index-3.htm" rel="noopener noreferrer" target="_self">
+          AR
+        </a>
+                    </li>
+
+                    <li class="item-toolbox">
+                        <a class="CIRCLE" href="index-4.htm" rel="noopener noreferrer" target="_self">
+          CA
+        </a>
+                    </li>
+
+                    <li class="item-toolbox">
+                        <a class="CIRCLE" href="index-5.htm" rel="noopener noreferrer" target="_self">
+          TAG
+        </a>
+                    </li>
+
+                    <li class="item-toolbox">
+                        <a class="CIRCLE" href="index-6.htm" rel="noopener noreferrer" target="_self">
+          SEA
+        </a>
+                    </li>
+
+                    <li class="item-toolbox">
+                        <a class="CIRCLE" href="atom.xml.htm" rel="noopener noreferrer" target="_blank">
+          RSS
+        </a>
+                    </li>
+
+                    <li class="item-toolbox">
+                        <a class="CIRCLE" href="javascript:shake()" rel="noopener noreferrer" target="_self">
+          HI
+        </a>
+                    </li>
+
+                </ul>
+            </div>
+          -->
+
+
+
+            <div class="box-blog-info">
+                <a class="avatar" href="index.html">
+                    <img src="ava.png" />
+                </a>
+                <div class="info">
+                    <h3 class="name" style="font-family: PoiretOne-Regular">
+                        Director
+                    </h3>
+                    <div class="slogan">
+                        I think, therefore I am.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <ul class="project-list">
+
+            <li class="project-item">
+
+                <i class="dot dot-0 "></i>
+
+                <div class="text">
+                    <a href="https://a.maorx.cn" class="project-url" rel="noopener noreferrer" target="_blank">青柠起始页</a>
+                    <span class="intro">- 优美的导航页</span>
+                    <!--class="project-url"是一种简单的样式-->
+
+
+
+            </li>
+
+
+
+            <li class="project-item">
+
+                <i class="dot dot-1 "></i>
+
+                <div class="text">
+                    <a class="project-url" href="https://webstack.cc" rel="noopener noreferrer" target="_blank">造作家</a>
+                    <span class="intro">- 静态响应式网址导航</span>
+                </div>
+
+            </li>
+
+
+
+            <li class="project-item">
+
+                <i class="dot dot-2 "></i>
+
+                <div class="text">
+                    <a class="project-url" rel="noopener noreferrer" target="_blank">待 续 ...</a>
+                    <span class="intro"></span>
+                    <!--<span class="intro"></span>这里为介绍-->
+                </div>
+
+            </li>
+
+        </ul>
+
+
+        </div>
+
+        <div class="modal" id="modal">
+            <span id="cover" class="cover hide"></span>
+            <div id="modal-dialog" class="modal-dialog hide-dialog">
+                <div class="modal-header">
+                    <span id="close" class="btn-close">Close</span>
+                </div>
+                <hr>
+                <div class="modal-body">
+                    <ul class="list-toolbox">
+
+                        <li class="item-toolbox">
+                            <a class="CIRCLE" href="index-3.htm" tppabs="https://rhinoc.top/archives/" rel="noopener noreferrer" target="_self">
+              AR
+            </a>
+                        </li>
+
+                        <li class="item-toolbox">
+                            <a class="CIRCLE" href="index-4.htm" tppabs="https://rhinoc.top/category/" rel="noopener noreferrer" target="_self">
+              CA
+            </a>
+                        </li>
+
+                        <li class="item-toolbox">
+                            <a class="CIRCLE" href="index-5.htm" tppabs="https://rhinoc.top/tag/" rel="noopener noreferrer" target="_self">
+              TAG
+            </a>
+                        </li>
+
+                        <li class="item-toolbox">
+                            <a class="CIRCLE" href="index-6.htm" tppabs="https://rhinoc.top/search/" rel="noopener noreferrer" target="_self">
+              SEA
+            </a>
+                        </li>
+
+                        <li class="item-toolbox">
+                            <a class="CIRCLE" href="atom.xml.htm" tppabs="https://rhinoc.top/atom.xml" rel="noopener noreferrer" target="_blank">
+              RSS
+            </a>
+                        </li>
+
+                        <li class="item-toolbox">
+                            <a class="CIRCLE" href="javascript:shake()" rel="noopener noreferrer" target="_self">
+              HI
+            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+
+        <script type="text/javascript">
+            function loadScript(url, callback) {
+                var script = document.createElement("script");
+                script.type = "text/javascript";
+
+                if (script.readyState) {
+                    //IE
+                    script.onreadystatechange = function() {
+                        if (
+                            script.readyState == "loaded" ||
+                            script.readyState == "complete"
+                        ) {
+                            script.onreadystatechange = null;
+                            callback();
+                        }
+                    };
+                } else {
+                    //Others
+                    script.onload = function() {
+                        callback();
+                    };
+                }
+
+                script.src = url;
+                document.getElementsByTagName("head")[0].appendChild(script);
+            }
+
+            window.onload = function() {
+                loadScript("bundle.js" /*tpa=https://rhinoc.top/js/bundle.js*/ , function() {
+                    loadScript("buildImgCaption.js" /*tpa=https://rhinoc.top/js/buildImgCaption.js*/ , function() {});
+                    loadScript("tocSpy.js" /*tpa=https://rhinoc.top/js/tocSpy.js*/ , function() {});
+                });
+            };
+        </script>
+
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({ tex2jax: { inlineMath: [ ["$","$"], ["\\(","\\)"] ], skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'], processEscapes: true } }); MathJax.Hub.Queue(function() { var all = MathJax.Hub.getAllJax(); for (var i = 0;
+            i
+            < all.length; ++i) all[i].SourceElement().parentNode.className +=' has-jax' ; }); </script>
+                <script src="MathJax.js-config=TeX-AMS-MML_HTMLorMML.js" tppabs="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+
+</html>
