@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<link
+    href="font-awesome.min.css" tppabs="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet"
+/>
+
+
+<html
+    class="light page-post"
+>
+    
+
+        <head>
+            <meta charset="utf-8" />
+            
+
+            <title>
+                软件包管理 | Dicerorhinus
+            </title>
+            <script src="jquery.slim.min.js" tppabs="https://cdn.bootcss.com/jquery/3.4.1/jquery.slim.min.js"></script>
+            <script
+                type="text/javascript"
+                src="high.js" tppabs="https://pic.rhinoc.top/high.js"
+            ></script>
+            <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1, maximum-scale=1"
+            />
+
+            
+            <meta
+                name="keywords"
+                content="Linux,"
+            />
+             <meta name="description" content="简介软件包分类 源码包：大多数都是C语言，安装时需要编译，耗时长 脚本安装包：不需要手动安装   二进制包（RPM包、系统默认包）：源码包经过编译得到  源码包优点：  开源，可以修改 可以自由选择所需功能 编译安装，所以更适合本机系统，更加稳定效率更高 卸载方便，直接删除目录  缺点：  安装步骤较多 编译过程时间较长 一旦报错新手难以解决  RPM包优点：  系统简单，只通过几个命令就能完成安">
+<meta property="og:type" content="article">
+<meta property="og:title" content="软件包管理">
+<meta property="og:url" content="https://www.rhinoc.top/linux_6/index.html">
+<meta property="og:site_name" content="Dicerorhinus">
+<meta property="og:description" content="简介软件包分类 源码包：大多数都是C语言，安装时需要编译，耗时长 脚本安装包：不需要手动安装   二进制包（RPM包、系统默认包）：源码包经过编译得到  源码包优点：  开源，可以修改 可以自由选择所需功能 编译安装，所以更适合本机系统，更加稳定效率更高 卸载方便，直接删除目录  缺点：  安装步骤较多 编译过程时间较长 一旦报错新手难以解决  RPM包优点：  系统简单，只通过几个命令就能完成安">
+<meta property="article:published_time" content="2019-01-11T16:00:00.000Z">
+<meta property="article:modified_time" content="2019-06-29T03:01:08.982Z">
+<meta property="article:author" content="rhinoc">
+<meta property="article:tag" content="Linux">
+<meta name="twitter:card" content="summary">  
+            <link rel="icon" href="ava.png" tppabs="https://rhinoc.top/images/ava.png" />
+             
+<link rel="stylesheet" href="mdn-like.css" tppabs="https://rhinoc.top/css/mdn-like.css">
+
+<link href="styles.css" tppabs="https://rhinoc.top/css/styles.css" rel="stylesheet" />
+ 
+
+            
+ 
+
+            <script
+                type="text/javascript"
+                defer
+                src="clipButton.js" tppabs="https://rhinoc.top/js/clipButton.js"
+            ></script>
+            <script type="text/javascript" src="clipboard.min.js" tppabs="https://rhinoc.top/js/clipboard.min.js"></script>
+        <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Dicerorhinus" type="application/atom+xml">
+</head>
+    </html>
+</html>
+
+<body>
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">+</span>
+  
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="index.htm" tppabs="https://rhinoc.top/">
+      <span class="toolbox-entry-text">+</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="index-3.htm" tppabs="https://rhinoc.top/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            AR
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="index-4.htm" tppabs="https://rhinoc.top/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            CA
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="index-5.htm" tppabs="https://rhinoc.top/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            TAG
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="index-6.htm" tppabs="https://rhinoc.top/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            SEA
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="atom.xml.htm" tppabs="https://rhinoc.top/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="javascript:shake()"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            HI
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+<div class="sider-bar">
+    <div id="toc" class="toc-article animated fadeInRight">
+        <div class="sub-box">
+            <strong class="toc-title">Table of Contents</strong> <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#简介"><span class="toc-text">简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#软件包分类"><span class="toc-text">软件包分类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#源码包"><span class="toc-text">源码包</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#RPM包"><span class="toc-text">RPM包</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RPM包管理"><span class="toc-text">RPM包管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#包命名"><span class="toc-text">包命名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#依赖性"><span class="toc-text">依赖性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装、升级与卸载"><span class="toc-text">安装、升级与卸载</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装命令"><span class="toc-text">安装命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#升级命令"><span class="toc-text">升级命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#卸载命令"><span class="toc-text">卸载命令</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查询"><span class="toc-text">查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#校验"><span class="toc-text">校验</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件提取"><span class="toc-text">文件提取</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#yum在线管理"><span class="toc-text">yum在线管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#IP地址配置"><span class="toc-text">IP地址配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#网络yum源"><span class="toc-text">网络yum源</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#yum命令"><span class="toc-text">yum命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#光盘yum源搭建"><span class="toc-text">光盘yum源搭建</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#源码包管理"><span class="toc-text">源码包管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#与RPM包区别："><span class="toc-text">与RPM包区别：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装过程"><span class="toc-text">安装过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#卸载"><span class="toc-text">卸载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选择"><span class="toc-text">选择</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#脚本安装包"><span class="toc-text">脚本安装包</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装过程-1"><span class="toc-text">安装过程-1</span></a></li></ol></li></ol>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="content content-post CENTER">
+   <article
+    id="post-linux_6"
+    class="article article-type-post"
+    itemprop="blogPost"
+>
+    <header class="article-header">
+        <h1 class="post-title">软件包管理</h1>
+
+        <div class="article-meta">
+            <span>
+                <i class="icon-calendar"></i>
+                <span>2019.01.12</span>
+            </span>
+
+            
+            <span class="article-author">
+                <i class="icon-user"></i>
+                <span>rhinoc</span>
+            </span>
+             
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="index-92.htm" tppabs="https://rhinoc.top/category/Linux/">Linux</a>
+  </span>
+
+  
+        </div>
+    </header>
+
+    <div class="article-content">
+         <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><h3 id="软件包分类"><a href="#软件包分类" class="headerlink" title="软件包分类"></a>软件包分类</h3><ul>
+<li>源码包：大多数都是C语言，安装时需要编译，耗时长<ul>
+<li>脚本安装包：不需要手动安装</li>
+</ul>
+</li>
+<li>二进制包（RPM包、系统默认包）：源码包经过编译得到</li>
+</ul>
+<h4 id="源码包"><a href="#源码包" class="headerlink" title="源码包"></a>源码包</h4><p>优点：</p>
+<ul>
+<li>开源，可以修改</li>
+<li>可以自由选择所需功能</li>
+<li>编译安装，所以更适合本机系统，更加稳定效率更高</li>
+<li>卸载方便，直接删除目录</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>安装步骤较多</li>
+<li>编译过程时间较长</li>
+<li>一旦报错新手难以解决</li>
+</ul>
+<h4 id="RPM包"><a href="#RPM包" class="headerlink" title="RPM包"></a>RPM包</h4><p>优点：</p>
+<ul>
+<li>系统简单，只通过几个命令就能完成安装、升级和卸载</li>
+<li>安装快速</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>不能看到源代码</li>
+<li>功能选择不如源码包灵活</li>
+<li>依赖性</li>
+</ul>
+<h2 id="RPM包管理"><a href="#RPM包管理" class="headerlink" title="RPM包管理"></a>RPM包管理</h2><h3 id="包命名"><a href="#包命名" class="headerlink" title="包命名"></a>包命名</h3><p>包全名：<code>httpd-2.2.15-15.el6.centos.1.i686.rpm</code></p>
+<ul>
+<li><code>httpd</code> 软件包名</li>
+<li><code>2.2.15</code> 软件版本</li>
+<li><code>15</code> 软件发布的次数</li>
+<li><code>el6.centos</code> 适合Linux平台（不写表示全平台适配）</li>
+<li><code>i686</code> 适合硬件平台（noarch表示全硬件适配）</li>
+<li><code>rpm</code> RPM包扩展名</li>
+</ul>
+<p>包全名：操作的包是未安装的软件包时，使用包全名，注意路径，通常用于安装和升级。<br>包名：操作已经安装的软件包时，使用包名。搜索/var/lib/rpm/中的数据库</p>
+<h3 id="依赖性"><a href="#依赖性" class="headerlink" title="依赖性"></a>依赖性</h3><ul>
+<li>树形依赖：a-&gt;b-&gt;c</li>
+<li>环形依赖：a-&gt;b-&gt;c-&gt;a（用一条命令同时安装）</li>
+<li>模块依赖：<a href="javascript:if(confirm(%27https://rhinoc.top/linux_6/www.rpmfind.net  \n\nThis file was not retrieved by Teleport Ultra, because the server reports that this file cannot be found.  \n\nDo you want to open it from the server?%27))window.location=%27https://rhinoc.top/linux_6/www.rpmfind.net%27" tppabs="https://rhinoc.top/linux_6/www.rpmfind.net">模块依赖查询网站</a><ul>
+<li>库依赖包（含有<code>.so</code>）不是单独独立的包，而是在一个软件包中的文件，需要在模块依赖查询网站中查询其所属的包。</li>
+</ul>
+</li>
+</ul>
+<h3 id="安装、升级与卸载"><a href="#安装、升级与卸载" class="headerlink" title="安装、升级与卸载"></a>安装、升级与卸载</h3><h4 id="安装命令"><a href="#安装命令" class="headerlink" title="安装命令"></a>安装命令</h4><p><code>rpm -ivh 包全名</code><br>选项：</p>
+<ul>
+<li><code>-i</code> install 安装</li>
+<li><code>-v</code> verbose 显示详细信息</li>
+<li><code>-h</code> hash 显示进度</li>
+<li><code>-nodeps</code> 不检测依赖性</li>
+</ul>
+<h4 id="升级命令"><a href="#升级命令" class="headerlink" title="升级命令"></a>升级命令</h4><p><code>rpm -Uvh 包全名</code><br>选项：</p>
+<ul>
+<li><code>-U</code> upgrade 升级</li>
+</ul>
+<h4 id="卸载命令"><a href="#卸载命令" class="headerlink" title="卸载命令"></a>卸载命令</h4><p><code>rpm -e 包名</code><br>选项：</p>
+<ul>
+<li><code>-e</code> 卸载</li>
+<li><code>--nodeps</code> 不检查依赖性</li>
+</ul>
+<h3 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h3><p><code>rpm -q 包名</code><br>选项：</p>
+<ul>
+<li><code>-q</code> query 查询</li>
+<li><code>-a</code> all 查询所有</li>
+<li><code>-i</code> information 查询软件信息</li>
+<li><code>-p</code> package 查询未安装包信息</li>
+<li><code>-l</code> list 列表</li>
+<li><code>-f</code> file 查询系统文件属于哪个软件包</li>
+<li><code>R</code> requires 查询软件包的依赖性</li>
+</ul>
+<h3 id="校验"><a href="#校验" class="headerlink" title="校验"></a>校验</h3><p><code>rpm -V</code> verify 校验指定RPM包中的文件有哪些被修改，如果完全一致，则不做任何输出，只有发现有不正确的文件时才会输出。</p>
+<ul>
+<li><code>S</code> 文件大小改变</li>
+<li><code>M</code> 文件类型或权限改变</li>
+<li><code>5</code> MD5校验和改变</li>
+<li><code>D</code> 文件的主设备号和次设备号改变</li>
+<li><code>L</code> 路径改变</li>
+<li><code>U</code> 文件的所有者改变</li>
+<li><code>G</code> 文件所有组改变</li>
+<li><p><code>T</code> 文件修改时间改变</p>
+</li>
+<li><p><code>c</code> 配置文件</p>
+</li>
+<li><p><code>d</code> 普通文档</p>
+</li>
+<li><code>g</code> 鬼文件（该文件不应该被这个RPM包包含）</li>
+<li><code>l</code> 授权文件</li>
+<li><code>r</code> 描述文件</li>
+</ul>
+<h3 id="文件提取"><a href="#文件提取" class="headerlink" title="文件提取"></a>文件提取</h3><p><code>rpm2cpio 包全名 |\ cpio -idv .文件绝对路径</code> 将RPM包转换为cpio格式</p>
+<pre><code>* `cpio` 是一个用于从档案文件中提取文件和创建软件档案文件的标准工具
+</code></pre><p>实例：  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">rpm -qf &#x2F;bin&#x2F;ls  </span><br><span class="line"># 查询ls命令属于哪个软件包  </span><br><span class="line">mv &#x2F;bin&#x2F;ls &#x2F;tmp&#x2F;  </span><br><span class="line"># 造成ls命令误删除假象  </span><br><span class="line">rpm2cpio &#x2F;mnt&#x2F;cdrom&#x2F;Packages&#x2F;coreutils-8.4-19.el6.i686.rpm | cpio -idv .&#x2F;bin&#x2F;ls  </span><br><span class="line"># 提取RPM包中ls命令到当前目录的&#x2F;bin&#x2F;ls下  </span><br><span class="line">cp &#x2F;root&#x2F;bin.ls &#x2F;bin&#x2F;  </span><br><span class="line">把ls命令复制到&#x2F;bin&#x2F;目录 完成修复</span><br></pre></td></tr></table></figure>
+<h3 id="yum在线管理"><a href="#yum在线管理" class="headerlink" title="yum在线管理"></a>yum在线管理</h3><h4 id="IP地址配置"><a href="#IP地址配置" class="headerlink" title="IP地址配置"></a>IP地址配置</h4><p>redhat系：使用setup工具<br>设置网卡自启：<br><code>vi /etc/sysconfig/network-scrpts/ifcfg-eth0</code> 将ONBOOT设置为YES<br>重启网络服务：<br><code>service network restart</code></p>
+<h4 id="网络yum源"><a href="#网络yum源" class="headerlink" title="网络yum源"></a>网络yum源</h4><p><code>vi /etc/yum.repos.d/CentOS-Base.repo</code></p>
+<ul>
+<li><code>[base]</code> 容器名称</li>
+<li><code>name</code> 容器说明，可以自己随便写</li>
+<li><code>mirrorlist</code> 镜像站点</li>
+<li><code>baseurl</code> yum源服务器地址，默认为官方</li>
+<li><code>enabled</code> 此容器是否生效</li>
+<li><code>gpgcheck</code> RPM数字证书是否生效</li>
+<li><code>gpgkey</code> 数字证书的公钥文件保存位置</li>
+</ul>
+<h4 id="yum命令"><a href="#yum命令" class="headerlink" title="yum命令"></a>yum命令</h4><ul>
+<li><code>yum list</code> 查询所有可用软件包列表</li>
+<li><code>yum search 关键字</code> 搜索服务器上所有和关键字相关的包</li>
+<li><code>yum -y install 包名</code> 安装<ul>
+<li><code>install</code> 安装</li>
+<li><code>-y</code> 自动回答yes</li>
+</ul>
+</li>
+<li><code>yum -y remove 包名</code> 卸载</li>
+<li><code>yum groupinstall 软件组名</code> 安装软件包组</li>
+<li><code>yum groupremove 软件组名</code> 卸载软件包组</li>
+</ul>
+<h4 id="光盘yum源搭建"><a href="#光盘yum源搭建" class="headerlink" title="光盘yum源搭建"></a>光盘yum源搭建</h4><ol>
+<li>挂载光盘 <code>mount /dev/cdrom /mnt/cdrom/</code></li>
+<li>让网络yum源文件失效 <code>mv CentOS-Debuginfo.repo CentOS-Debuginfo.repo.bak</code></li>
+<li>修改光盘yum源文件 <code>vim CentOS-Media.repo</code></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[c6-media]  </span><br><span class="line">name&#x3D;CentOS-$releasever - Media  </span><br><span class="line">baseurl&#x3D;file:&#x2F;&#x2F;&#x2F;mnt&#x2F;cdrom  </span><br><span class="line"># 地址为光盘挂载地址  </span><br><span class="line">gpgcheck &#x3D; 1  </span><br><span class="line">enabled &#x3D; 1  </span><br><span class="line"># 使生效  </span><br><span class="line">gpgkey&#x3D;file:&#x2F;&#x2F;&#x2F;etc&#x2F;pki&#x2F;rpm-gpg&#x2F;RPM-GPG-KEY-CentOS-6</span><br></pre></td></tr></table></figure>
+<p>注意：Linux中很多配置文件不支持注释和缩进</p>
+<h2 id="源码包管理"><a href="#源码包管理" class="headerlink" title="源码包管理"></a>源码包管理</h2><h3 id="与RPM包区别："><a href="#与RPM包区别：" class="headerlink" title="与RPM包区别："></a>与RPM包区别：</h3><p>RPM包安装在默认位置中</p>
+<div class="table-container">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>/etc/</th>
+
+<th>配置文件安装目录</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>/usr/bin/</td>
+
+<td>可执行的命令安装目录</td>
+
+</tr>
+
+<tr>
+
+<td>/usr/lib/</td>
+
+<td>程序所使用的函数库保存位置</td>
+
+</tr>
+
+<tr>
+
+<td>/usr/share/doc/</td>
+
+<td>基本的软件使用手册保存位置</td>
+
+</tr>
+
+<tr>
+
+<td>/usr/share/man/</td>
+
+<td>帮助文件保存位置</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<p>源码包安装在指定位置中，一般是<code>/usr/local/软件名/</code>。</p>
+<p>安装位置不同带来的影响：RPM包安装的服务可以使用系统服务管理命令（service）来管理，例如RPM包安装的apache的启动方法是：<code>/etc/rc.d/init.d/httpd</code>或<code>start service httpd start</code>。而源码包安装的服务不能被service搜索到，因为没有安装到默认路径中，只能用绝对路径进行服务管理。</p>
+<h3 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h3><ol>
+<li>安装C语言编译器</li>
+<li>下载源码包</li>
+<li>解压缩 <code>tar -zxvf 压缩包文件名</code></li>
+<li>进入解压缩目录（INSTALL为安装说明，README为软件说明）</li>
+<li>软件配置和检查 <code>./configure</code><ol>
+<li>定义需要的功能选项 <code>./configure --prefix=/usr/local/软件名</code></li>
+<li>监测系统环境是否符合安装要求</li>
+<li>生成Makefile文件，用以后续使用</li>
+</ol>
+</li>
+<li>编译 <code>make</code></li>
+<li>若上述过程报错 <code>make clean</code></li>
+<li>安装 <code>make install</code></li>
+</ol>
+<blockquote>
+<p>⚠️注意：<br>源码保存位置：<code>/usr/local/src</code><br>软件安装位置：<code>/usr/local/</code>  </p>
+</blockquote>
+<p>如何确定安装过程报错：</p>
+<ul>
+<li>安装过程停止</li>
+<li>出现error、warning或no的提示</li>
+</ul>
+<p>源码包和RPM包可以共存。</p>
+<h3 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h3><p><code>rm -rf 安装目录</code></p>
+<h3 id="选择"><a href="#选择" class="headerlink" title="选择"></a>选择</h3><p>对外访问：RPM包<br>只供本机使用：源码包</p>
+<h2 id="脚本安装包"><a href="#脚本安装包" class="headerlink" title="脚本安装包"></a>脚本安装包</h2><p>不是独立的软件包类型，常见安装的是源码包。是人为把安装过程写成了自动安装的脚本，只要执行脚本，定义简单的参数，就可以完成安装。</p>
+<h3 id="安装过程-1"><a href="#安装过程-1" class="headerlink" title="安装过程-1"></a>安装过程-1</h3><ol>
+<li>下载软件</li>
+<li>解压缩，进入解压缩目录</li>
+<li><code>./setup.sh</code></li>
+</ol>
+ <div class="post-copyright">
+    <p class="post-copyright-author">
+        <b>本文作者：</b>
+        <a href="index.html" tppabs="https://rhinoc.top/index.html" target="_blank" title="rhinoc">rhinoc</a>
+    </p>
+    <p class="post-copyright-link">
+        <b>本文链接：</b>
+        <a href="index-27.htm" tppabs="https://rhinoc.top/linux_6/" target="_blank" title="软件包管理">https://www.rhinoc.top/linux_6/</a></p>
+    <p class="post-copyright-license">
+        <b>版权声明：</b>
+        本博客所有文章除特别声明外，均采用<i class="fa fa-fw fa-creative-commons"></i><a href="javascript:if(confirm(%27https://creativecommons.org/licenses/by-nc-sa/4.0/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://creativecommons.org/licenses/by-nc-sa/4.0/%27" tppabs="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA 4.0</a>国际许可协议，转载请注明。</p>
+</div>
+ 
+    </div>
+</article>
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">打赏</span>
+      <div class="donation-body">
+        <div class="tip text-center">Love U 3000</div>
+        <ul>
+        
+          <li class="item">
+            
+              <span>Through WeChat</span>
+            
+            <img src="wechat.png" tppabs="https://rhinoc.top/images/wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            
+              <span>Through Alipay</span>
+            
+            <img src="alipay.jpg" tppabs="https://rhinoc.top/images/alipay.jpg" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="index-56.htm" tppabs="https://rhinoc.top/arduino_6/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="index-26.htm" tppabs="https://rhinoc.top/linux_7/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+<!-- <a id="backTop" class="back-top animated fadeIn faster">
+    <i class="icon-angle-up"></i>
+</a> -->
+<div id="back-to-top" class="animated fadeIn faster show">
+    <div class="flow"></div>
+    <span class="percentage animated fadeIn faster">0%</span>
+    <span class="iconfont icon-top02 animated fadeIn faster"></span>
+</div>
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">Close</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="index-3.htm" tppabs="https://rhinoc.top/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              AR
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="index-4.htm" tppabs="https://rhinoc.top/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              CA
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="index-5.htm" tppabs="https://rhinoc.top/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              TAG
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="index-6.htm" tppabs="https://rhinoc.top/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              SEA
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="atom.xml.htm" tppabs="https://rhinoc.top/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="javascript:shake()"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              HI
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+
+<!-- Gitalk评论插件通用代码 -->
+<div id="gitalk-container"></div>
+
+<link
+    rel="stylesheet"
+    href="gitalk.css" tppabs="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"
+/>
+<script src="gitalk.min.js" tppabs="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="md5.js" tppabs="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: "52a6e06de4768571309b",
+        clientSecret: "4ce535084c3818a90a5deacfe2e23911110441ce",
+        repo: "blog-comments",
+        owner: "rhinoc",
+        id: md5(location.pathname),
+        admin: ["rhinoc"],
+        // facebook-like distraction free mode
+        distractionFreeMode: false
+    });
+    gitalk.render("gitalk-container");
+</script>
+<!-- Gitalk代码结束 -->
+
+
+
+  </div>
+
+  
+  <script type="text/javascript">
+    function loadScript(url, callback) {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+
+        if (script.readyState) {
+            //IE
+            script.onreadystatechange = function() {
+                if (
+                    script.readyState == "loaded" ||
+                    script.readyState == "complete"
+                ) {
+                    script.onreadystatechange = null;
+                    callback();
+                }
+            };
+        } else {
+            //Others
+            script.onload = function() {
+                callback();
+            };
+        }
+
+        script.src = url;
+        document.getElementsByTagName("head")[0].appendChild(script);
+    }
+
+    window.onload = function() {
+        loadScript("bundle.js"/*tpa=https://rhinoc.top/js/bundle.js*/, function() {
+            loadScript("buildImgCaption.js"/*tpa=https://rhinoc.top/js/buildImgCaption.js*/, function() {});
+            loadScript("tocSpy.js"/*tpa=https://rhinoc.top/js/tocSpy.js*/, function() {});
+        });
+    };
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="MathJax.js-config=TeX-AMS-MML_HTMLorMML.js" tppabs="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

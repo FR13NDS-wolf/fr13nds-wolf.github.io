@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<link
+    href="font-awesome.min.css" tppabs="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet"
+/>
+
+
+<html
+    class="light page-post"
+>
+    
+
+        <head>
+            <meta charset="utf-8" />
+            
+
+            <title>
+                你好，CSS！ | Dicerorhinus
+            </title>
+            <script src="jquery.slim.min.js" tppabs="https://cdn.bootcss.com/jquery/3.4.1/jquery.slim.min.js"></script>
+            <script
+                type="text/javascript"
+                src="high.js" tppabs="https://pic.rhinoc.top/high.js"
+            ></script>
+            <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1, maximum-scale=1"
+            />
+
+            
+            <meta
+                name="keywords"
+                content="Arduino,"
+            />
+             <meta name="description" content="概述规则语法 链接CSS样式表到HTML12345&lt;head&gt;  &lt;meta charset&#x3D;&#39;UTF-8&#39;&#x2F;&gt;  &lt;title&gt;Hello, CSS&lt;&#x2F;title&gt;  &lt;link rel&#x3D;&#39;stylesheet&#39; href&#x3D;&#39;styles.css&#39;&#x2F;&gt;&lt;&#x2F;head&gt; &lt;link&gt;就像是&lt;a&gt;，但是只用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="你好，CSS！">
+<meta property="og:url" content="https://www.rhinoc.top/css_1/index.html">
+<meta property="og:site_name" content="Dicerorhinus">
+<meta property="og:description" content="概述规则语法 链接CSS样式表到HTML12345&lt;head&gt;  &lt;meta charset&#x3D;&#39;UTF-8&#39;&#x2F;&gt;  &lt;title&gt;Hello, CSS&lt;&#x2F;title&gt;  &lt;link rel&#x3D;&#39;stylesheet&#39; href&#x3D;&#39;styles.css&#39;&#x2F;&gt;&lt;&#x2F;head&gt; &lt;link&gt;就像是&lt;a&gt;，但是只用">
+<meta property="og:image" content="https://pic.rhinoc.top/mweb/15702703457387.png">
+<meta property="og:image" content="https://pic.rhinoc.top/mweb/15702710226101.png">
+<meta property="og:image" content="http://pic.rhinoc.top/ZIkFlr.svg">
+<meta property="article:published_time" content="2018-10-27T16:00:00.000Z">
+<meta property="article:modified_time" content="2019-10-05T11:24:40.136Z">
+<meta property="article:author" content="rhinoc">
+<meta property="article:tag" content="Arduino">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.rhinoc.top/mweb/15702703457387.png">  
+            <link rel="icon" href="ava.png" tppabs="https://rhinoc.top/images/ava.png" />
+             
+<link rel="stylesheet" href="mdn-like.css" tppabs="https://rhinoc.top/css/mdn-like.css">
+
+<link href="styles.css" tppabs="https://rhinoc.top/css/styles.css" rel="stylesheet" />
+ 
+
+            
+ 
+
+            <script
+                type="text/javascript"
+                defer
+                src="clipButton.js" tppabs="https://rhinoc.top/js/clipButton.js"
+            ></script>
+            <script type="text/javascript" src="clipboard.min.js" tppabs="https://rhinoc.top/js/clipboard.min.js"></script>
+        <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Dicerorhinus" type="application/atom+xml">
+</head>
+    </html>
+</html>
+
+<body>
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">+</span>
+  
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="index.htm" tppabs="https://rhinoc.top/">
+      <span class="toolbox-entry-text">+</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="index-3.htm" tppabs="https://rhinoc.top/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            AR
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="index-4.htm" tppabs="https://rhinoc.top/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            CA
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="index-5.htm" tppabs="https://rhinoc.top/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            TAG
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="index-6.htm" tppabs="https://rhinoc.top/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            SEA
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="atom.xml.htm" tppabs="https://rhinoc.top/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="javascript:shake()"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            HI
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+<div class="sider-bar">
+    <div id="toc" class="toc-article animated fadeInRight">
+        <div class="sub-box">
+            <strong class="toc-title">Table of Contents</strong> <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-text">概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#规则语法"><span class="toc-text">规则语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#链接CSS样式表到HTML"><span class="toc-text">链接CSS样式表到HTML</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#度量单位"><span class="toc-text">度量单位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选择器"><span class="toc-text">选择器</span></a></li></ol></li></ol>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="content content-post CENTER">
+   <article
+    id="post-css_1"
+    class="article article-type-post"
+    itemprop="blogPost"
+>
+    <header class="article-header">
+        <h1 class="post-title">你好，CSS！</h1>
+
+        <div class="article-meta">
+            <span>
+                <i class="icon-calendar"></i>
+                <span>2018.10.28</span>
+            </span>
+
+            
+            <span class="article-author">
+                <i class="icon-user"></i>
+                <span>rhinoc</span>
+            </span>
+             
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="index-97.htm" tppabs="https://rhinoc.top/category/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a>
+  </span>
+
+  
+        </div>
+    </header>
+
+    <div class="article-content">
+         <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><h3 id="规则语法"><a href="#规则语法" class="headerlink" title="规则语法"></a>规则语法</h3><p><img src="15702703457387.png" tppabs="https://pic.rhinoc.top/mweb/15702703457387.png" alt=""></p>
+<h3 id="链接CSS样式表到HTML"><a href="#链接CSS样式表到HTML" class="headerlink" title="链接CSS样式表到HTML"></a>链接CSS样式表到HTML</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">'UTF-8'</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Hello, CSS<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">'stylesheet'</span> <span class="attr">href</span>=<span class="string">'styles.css'</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><code>&lt;link&gt;</code>就像是<code>&lt;a&gt;</code>，但是只用于<code>&lt;head&gt;</code>内，<code>rel</code>属性定义了link链接的资源与当前HTML文件的关系。</p>
+<h3 id="度量单位"><a href="#度量单位" class="headerlink" title="度量单位"></a>度量单位</h3><p>最常见的单位有<code>px</code>和<code>em</code>，前者是<ruby>像素<rt>pixel</rt></ruby>，后者则是一个相对<ruby>基准字体大小<rt>base font size</rt></ruby>的概念。<br><img src="15702710226101.png" tppabs="https://pic.rhinoc.top/mweb/15702710226101.png" alt=""></p>
+<h3 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h3><p><img src="ZIkFlr.svg" tppabs="http://pic.rhinoc.top/ZIkFlr.svg" alt=""></p>
+<p><strong>基本选择器</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>选择器</th>
+<th>类别</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*</td>
+<td>通配选择器</td>
+</tr>
+<tr>
+<td>E</td>
+<td>元素选择器</td>
+</tr>
+<tr>
+<td>#id</td>
+<td>ID选择器</td>
+</tr>
+<tr>
+<td>.class</td>
+<td>类选择器</td>
+</tr>
+<tr>
+<td>selector1, selectorN</td>
+<td>群组选择器</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>层次选择器</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>选择器</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E F</td>
+<td>后代选择器（选择E下面的所有F）</td>
+</tr>
+<tr>
+<td>E&gt;F</td>
+<td>子元素选择器（只选择E下一级的F）</td>
+</tr>
+<tr>
+<td>E+F</td>
+<td>相邻兄弟选择器（选择与E同级的第一个F）</td>
+</tr>
+<tr>
+<td>E~F</td>
+<td>通用选择器（选择E后与E同级的所有F）</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>动态伪类选择器</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>选择器</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E:link</td>
+<td>链接伪类选择器</td>
+</tr>
+<tr>
+<td>E:visited</td>
+<td>链接伪类选择器</td>
+</tr>
+<tr>
+<td>E:active</td>
+<td>用户行为伪类选择器</td>
+</tr>
+<tr>
+<td>E:hover</td>
+<td>用户行为伪类选择器</td>
+</tr>
+<tr>
+<td>E:focus</td>
+<td>用户行为伪类选择器</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>目标伪类选择器</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>选择器</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E:link</td>
+<td>链接伪类选择器</td>
+</tr>
+<tr>
+<td>E:visited</td>
+<td>链接伪类选择器</td>
+</tr>
+<tr>
+<td>E:active</td>
+<td>用户行为伪类选择器</td>
+</tr>
+<tr>
+<td>E:hover</td>
+<td>用户行为伪类选择器</td>
+</tr>
+<tr>
+<td>E:focus</td>
+<td>用户行为伪类选择器</td>
+</tr>
+</tbody>
+</table>
+</div>
+ <div class="post-copyright">
+    <p class="post-copyright-author">
+        <b>本文作者：</b>
+        <a href="index.html" tppabs="https://rhinoc.top/index.html" target="_blank" title="rhinoc">rhinoc</a>
+    </p>
+    <p class="post-copyright-link">
+        <b>本文链接：</b>
+        <a href="index-60.htm" tppabs="https://rhinoc.top/css_1/" target="_blank" title="你好，CSS！">https://www.rhinoc.top/css_1/</a></p>
+    <p class="post-copyright-license">
+        <b>版权声明：</b>
+        本博客所有文章除特别声明外，均采用<i class="fa fa-fw fa-creative-commons"></i><a href="javascript:if(confirm(%27https://creativecommons.org/licenses/by-nc-sa/4.0/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://creativecommons.org/licenses/by-nc-sa/4.0/%27" tppabs="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">BY-NC-SA 4.0</a>国际许可协议，转载请注明。</p>
+</div>
+ 
+    </div>
+</article>
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">打赏</span>
+      <div class="donation-body">
+        <div class="tip text-center">Love U 3000</div>
+        <ul>
+        
+          <li class="item">
+            
+              <span>Through WeChat</span>
+            
+            <img src="wechat.png" tppabs="https://rhinoc.top/images/wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            
+              <span>Through Alipay</span>
+            
+            <img src="alipay.jpg" tppabs="https://rhinoc.top/images/alipay.jpg" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="index-28.htm" tppabs="https://rhinoc.top/linux_5/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="index-59.htm" tppabs="https://rhinoc.top/arduino_3/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+<!-- <a id="backTop" class="back-top animated fadeIn faster">
+    <i class="icon-angle-up"></i>
+</a> -->
+<div id="back-to-top" class="animated fadeIn faster show">
+    <div class="flow"></div>
+    <span class="percentage animated fadeIn faster">0%</span>
+    <span class="iconfont icon-top02 animated fadeIn faster"></span>
+</div>
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">Close</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="index-3.htm" tppabs="https://rhinoc.top/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              AR
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="index-4.htm" tppabs="https://rhinoc.top/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              CA
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="index-5.htm" tppabs="https://rhinoc.top/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              TAG
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="index-6.htm" tppabs="https://rhinoc.top/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              SEA
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="atom.xml.htm" tppabs="https://rhinoc.top/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="javascript:shake()"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              HI
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+
+<!-- Gitalk评论插件通用代码 -->
+<div id="gitalk-container"></div>
+
+<link
+    rel="stylesheet"
+    href="gitalk.css" tppabs="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"
+/>
+<script src="gitalk.min.js" tppabs="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="md5.js" tppabs="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: "52a6e06de4768571309b",
+        clientSecret: "4ce535084c3818a90a5deacfe2e23911110441ce",
+        repo: "blog-comments",
+        owner: "rhinoc",
+        id: md5(location.pathname),
+        admin: ["rhinoc"],
+        // facebook-like distraction free mode
+        distractionFreeMode: false
+    });
+    gitalk.render("gitalk-container");
+</script>
+<!-- Gitalk代码结束 -->
+
+
+
+  </div>
+
+  
+  <script type="text/javascript">
+    function loadScript(url, callback) {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+
+        if (script.readyState) {
+            //IE
+            script.onreadystatechange = function() {
+                if (
+                    script.readyState == "loaded" ||
+                    script.readyState == "complete"
+                ) {
+                    script.onreadystatechange = null;
+                    callback();
+                }
+            };
+        } else {
+            //Others
+            script.onload = function() {
+                callback();
+            };
+        }
+
+        script.src = url;
+        document.getElementsByTagName("head")[0].appendChild(script);
+    }
+
+    window.onload = function() {
+        loadScript("bundle.js"/*tpa=https://rhinoc.top/js/bundle.js*/, function() {
+            loadScript("buildImgCaption.js"/*tpa=https://rhinoc.top/js/buildImgCaption.js*/, function() {});
+            loadScript("tocSpy.js"/*tpa=https://rhinoc.top/js/tocSpy.js*/, function() {});
+        });
+    };
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="MathJax.js-config=TeX-AMS-MML_HTMLorMML.js" tppabs="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
